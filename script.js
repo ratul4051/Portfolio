@@ -3,30 +3,34 @@ const roles = ["WordPress Developer", "Content Creator", "Web Designer"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+let currentText = "";
 
 function typeEffect() {
-  const currentRole = roles[roleIndex];
-  const currentText = isDeleting
-    ? currentRole.substring(0, charIndex--)
-    : currentRole.substring(0, charIndex++);
+  const fullText = roles[roleIndex];
+
+  if (isDeleting) {
+    currentText = fullText.substring(0, charIndex--);
+  } else {
+    currentText = fullText.substring(0, charIndex++);
+  }
 
   typingText.textContent = `I am a ${currentText}`;
 
-  if (!isDeleting && charIndex === currentRole.length) {
-    isDeleting = true;
-    setTimeout(typeEffect, 1000);
+  if (!isDeleting && charIndex === fullText.length) {
+    setTimeout(() => isDeleting = true, 1000);
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(typeEffect, 500);
-  } else {
-    setTimeout(typeEffect, isDeleting ? 60 : 100);
   }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 70);
 }
 
-document.addEventListener("DOMContentLoaded", typeEffect);
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
 
-// Mobile menu toggle
+// Toggle mobile menu
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
