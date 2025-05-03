@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header class="hero">
     <div class="navbar">
       <div class="container nav-container">
-        <h1 class="logo">Ratul</h1>
+        <h1 class="logo">Ratul<span class="logo-sub">.dev</span></h1>
         <div class="menu-toggle" id="menu-toggle">
           <i class="fas fa-bars"></i>
         </div>
@@ -36,7 +37,7 @@
           <a href="#contact" class="btn outline">Contact Me</a>
         </div>
 
-        <div class="social-icons">
+        <div class="social-icons1">
           <a href="https://github.com/ratul4051"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/ratul4051/"><i class="fab fa-linkedin"></i></a>
           <a href="https://www.facebook.com/md.ratul.hasan.25/"><i class="fab fa-facebook"></i></a>
@@ -107,7 +108,108 @@
     </div>
   </section>
   
+  <section class="portfolio-section" id="projects">
+    <h4>Projects</h4>
+    <div class="portfolio-filter">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="wordpress">WordPress</button>
+      <button class="filter-btn" data-filter="woocommerce">WooCommerce</button>
+      <button class="filter-btn" data-filter="frontend">Front-End</button>
+    </div>
   
+    <div class="portfolio-grid">
+      <div class="portfolio-card" data-category="wordpress">
+        <img src="./img/Rf_academy1.png" alt="Project 1">
+        <div class="description">
+          <h4>Learing Management Web</h4>
+          <p>E-Learning</p>
+          <a href="https://surl.li/mnexwg" class="view-link">View Project →</a>
+        </div>
+        <div class="portfolio-overlay">
+          <h3>LMS Website</h3>
+          <a href="https://surl.li/mnexwg" class="view-link">View Project →</a>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="woocommerce">
+        <img src="./img/Funishop_crop.png" alt="Project 2">
+        <div class="description">
+          <h4>Modern Furniture Store</h4>
+          <p>E-commerce</p>
+          <a href="https://surl.li/mnexwg" class="view-link">View Project →</a>
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Furniture Shop</h3>
+          <a href="https://surl.gd/edahyf" class="view-link">View Project →</a>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="Front-End">
+        <img src="./img/Edtech.png" alt="Project 1">
+        <div class="description">
+          <h4>Ed Tech</h4>
+          <p>Landing Page</p>
+          <a href="https://surl.li/mnexwg" class="view-link">View Project →</a>
+        </div>
+        <div class="portfolio-overlay">
+          <h3>EdTech Platform</h3>
+          <a href="https://ratul4051.github.io/Edtech/" class="view-link">View Project →</a>
+        </div>
+      </div>
+      <div class="portfolio-card" data-category="wordpress">
+        <img src="./img/Fitness_web.png" alt="Project 1">
+        <div class="description">
+          <h4>Fitness Website</h4>
+          <p>Landing Page</p>
+          <a href="https://surl.li/mnexwg" class="view-link">View Project →</a>
+        </div>
+        <div class="portfolio-overlay">
+          <h3>Fitness Web</h3>
+          <a href="#" class="view-link">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="get_in">
+    <h5 class="contact-head">Get In Touch</h5>
+    <p>Have a project in mind? Let's discuss how I can help you bring your ideas to life.</p>
+  
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="info-item"><i class="fas fa-envelope"></i> ratulhasanofficial24@gmail.com</div>
+        <div class="info-item"><i class="fas fa-phone"></i> +880 1758 170853</div>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</div>
+  
+        <div class="social-icons">
+          <a href="https://github.com/ratul4051"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ratul4051/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/md.ratul.hasan.25/"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+  
+      <!-- Contact Form -->
+      <form class="contact-form" action="https://formsubmit.co/ratulhasanofficial24@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="/thank.html">
+  
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+  
+        <label>Your Email</label>
+        <input type="email" name="email" required>
+  
+        <label>Subject</label>
+        <input type="text" name="subject" required>
+  
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+  
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
   
   
   <script src="script.js"></script>

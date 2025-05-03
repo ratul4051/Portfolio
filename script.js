@@ -37,3 +37,22 @@ const navLinks = document.getElementById("nav-links");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-filter');
+
+    portfolioCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
